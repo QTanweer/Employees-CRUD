@@ -2,13 +2,29 @@
 <html>
 <head>
     <title>Home</title>
+    <style>
+        /* Add some basic CSS styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
 <body>
     <h1>Employees</h1>
     <a href="{{url_for('create')}}">Create Employee</a>
     <table>
         <thead>
-            <tr>                <th>Name</th>
+            <tr>
+                <th>Name</th>
                 <th>Salary</th>
                 <th>Address</th>
                 <th>Actions</th>

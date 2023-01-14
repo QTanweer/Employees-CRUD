@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Employee</title>
+    <style>
+        /* Add some basic CSS styles */
+        h1, p {
+            text-align: center;
+        }
+        a {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Delete Employee</h1>
+    <p>Are you sure you want to delete the following employee?</p>
+    <p>Name: {{employee.name}}</p>
+    <p>Salary: {{employee.salary}}</p>
+    <p>Address: {{employee.address}}</p>
+    <a href="{{url_for('delete', id=employee.id)}}">Delete</a>
+    <a href="{{url_for('home')}}">Cancel</a>
+</body>
+</html>
+

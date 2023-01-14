@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+</head>
+<body>
+    <h1>Employees</h1>
+    <a href="{{url_for('create')}}">Create Employee</a>
+    <table>
+        <thead>
+            <tr>                <th>Name</th>
+                <th>Salary</th>
+                <th>Address</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for employee in employees %}
+            <tr>
+                <td>{{employee.name}}</td>
+                <td>{{employee.salary}}</td>
+                <td>{{employee.address}}</td>
+                <td>
+                    <a href="{{url_for('read', id=employee.id)}}">Read</a>
+                    <a href="{{url_for('update', id=employee.id)}}">Update</a>
+                    <a href="{{url_for('delete', id=employee.id)}}">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
+
